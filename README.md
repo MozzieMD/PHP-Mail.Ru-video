@@ -5,7 +5,7 @@ Use:
 ```php
 $mail = new MailRU("https://my.mail.ru/v/himym_series/video/9/92.html");
 foreach( $mail->VideoUrls() as $video ) {
-   echo $video->key . "<br>" . $video->url . "<br><br>";
+   echo $video->key . " " . $video->url . "<br><br>";
 }
 ```
 Outputs:
