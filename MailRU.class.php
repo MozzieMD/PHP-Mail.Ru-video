@@ -1,12 +1,12 @@
 <?php
 
 class MailRU {
-	private $_URL, $_videoId, $_videoUrls, $_headers, $_VideoKey;
-	private $_isOneQuality = false;
+	private $_URL, $_videoId, $_videoUrls, $_headers, $_VideoKey, $_isOneQuality;
+	
 	public function __construct($urlData) {
 		$this->_URL = $urlData;
 		$this->getVideoId();
-		$this->getVideoUrl();
+		$this->getVideoUrls();
 		$this->getVideoKey();
 	}
 	
@@ -23,7 +23,7 @@ class MailRU {
 		return $result;
 	}
 	
-	private function getVideoUrl() {
+	private function getVideoUrls() {
 		$json = json_decode($this->getJson());
 		
 		if (count((array)$json->videos) === 1)
