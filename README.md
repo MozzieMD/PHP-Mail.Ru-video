@@ -32,3 +32,6 @@ if ($mail->IsOneQuality())
 else
   echo "There is more than one quality";
 ```
+### Note
+To play the video you will need to make a php proxy with curl, after that get the video url and the video key cookie.
+To get access to the video you will need to stream the video!
